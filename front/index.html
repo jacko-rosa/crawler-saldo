@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="montarDadosEmTela.js"></script>
+    <title>Crawler-saldo</title>
 </head>
 
 <body>
@@ -15,7 +14,7 @@
         <input type="number" name="agencia" placeholder="Agência" />
         <input type="number" name="conta" placeholder="Conta" />
         <input type="password" name="senha" placeholder="Senha" />
-        <button type="button" onclick=" getResponse()">Buscar</button>
+        <button type="button" onclick="getResponse()">Buscar</button>
     </form>
 
     <ul id="list-results"></ul>
@@ -27,10 +26,6 @@
                 conta: document.querySelectorAll('input[name=conta]')[0].value,
                 senha: document.querySelectorAll('input[name=senha]')[0].value
             }
-            // const response = await fetch(`http://localhost:8080/getVoos?origin=${request.origin}&destination=${request.destination}&date=${request.date}`);
-            // const result = await response.json();
-            // console.log(result);
-            // build(result)
             alert(`request: ${JSON.stringify(request)}`)
         }
     </script>
